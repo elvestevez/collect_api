@@ -23,8 +23,8 @@ def get_data_year(engineDB):
     # query 
     query = f'''
     SELECT DISTINCT "Year"
-    FROM {POPULATION_TABLE}'
-    ORDER BY "Year"'
+    FROM {POPULATION_TABLE}
+    ORDER BY "Year"
     '''
 
     #print(query)
@@ -54,7 +54,7 @@ def get_years():
     return result
 
 # get data DB
-def get_pop(engineDB, year, id_city=None, id_province=None, id_region=None, age='no', gr_province='no', gr_region='no', normalized='no'):
+def get_pop(engineDB, year=None, id_city=None, id_province=None, id_region=None, age='no', gr_province='no', gr_region='no', normalized='no'):
     #name_table = year + POPULATION_TABLE
 
     # query 
@@ -444,9 +444,14 @@ def get_pop(engineDB, year, id_city=None, id_province=None, id_region=None, age=
             INNER JOIN PROVINCE p ON p.Id_province = c.Id_province 
             INNER JOIN REGION r ON r.Id_region = p.Id_region
         WHERE 1 = 1
-            AND po."Year" = {year}
         '''
 
+    # specific year
+    if year != None:
+        query = query + f'''
+        AND po."Year" = {year}
+        '''
+    
     # specific city
     if id_city != None:
         query = query + f'''
@@ -563,7 +568,7 @@ def get_pop_metadata(data, name):
     return dict_datatype
 
 # get population by city, province or region
-def get_population(year, id_city=None, id_province=None, id_region=None, age='no', gr_province='no', gr_region='no', normalized='no'):
+def get_population(year=None, id_city=None, id_province=None, id_region=None, age='no', gr_province='no', gr_region='no', normalized='no'):
     # connect
     engineDB = connect_DB()
     # select data

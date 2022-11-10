@@ -7,7 +7,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/cities"
+        "example": "https://data-collect-api.herokuapp.com/cities"
     },
     {
         "endpoint": "/provinces",
@@ -17,7 +17,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/provinces"
+        "example": "https://data-collect-api.herokuapp.com/provinces"
     },
     {
         "endpoint": "/regions",
@@ -27,7 +27,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/regions"
+        "example": "https://data-collect-api.herokuapp.com/regions"
     },
     {
         "endpoint": "/indicators-income-ine",
@@ -37,7 +37,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/indicators-income-ine"
+        "example": "https://data-collect-api.herokuapp.com/indicators-income-ine"
     },
     {
         "endpoint": "/income-ine/years",
@@ -47,50 +47,51 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-ine/years"
+        "example": "https://data-collect-api.herokuapp.com/income-ine/years"
     },
     {
-        "endpoint": "/income-ine/cities/year/<year>",
-        "description": "Get income in Spain by INE for every available city in a year",
+        "endpoint": "/income-ine/cities",
+        "description": "Get income in Spain by INE for every available city",
         "methods": "GET",
-        "path-args": [{"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-ine/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/income-ine/cities?year=2020"
     },
     {
-        "endpoint": "/income-ine/city/<id_city>/year/<year>",
-        "description": "Get income in Spain by INE for specific city in a year",
+        "endpoint": "/income-ine/city/<id_city>",
+        "description": "Get income in Spain by INE for specific city",
         "methods": "GET",
-        "path-args": [{"id": "id_city", "description": "Selected city id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [{"id": "id_city", "description": "Selected city id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-ine/city/28089/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/income-ine/city/28089?year=2020"
     },
     {
-        "endpoint": "/income-ine/province/<id_province>/cities/year/<year>",
-        "description": "Get income in Spain by INE for every available city for specific province in a year",
+        "endpoint": "/income-ine/province/<id_province>/cities",
+        "description": "Get income in Spain by INE for every available city for specific province",
         "methods": "GET",
-        "path-args": [{"id": "id_province", "description": "Selected province id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [{"id": "id_province", "description": "Selected province id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-ine/province/03/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/income-ine/province/03/cities?year=2020"
     },
     {
-        "endpoint": "/income-ine/region/<id_region>/cities/year/<year>",
-        "description": "Get income in Spain by INE for every available city for specific region in a year",
+        "endpoint": "/income-ine/region/<id_region>/cities",
+        "description": "Get income in Spain by INE for every available city for specific region",
         "methods": "GET",
-        "path-args": [{"id": "id_region", "description": "Selected region id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [{"id": "id_region", "description": "Selected region id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-ine/region/06/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/income-ine/region/06/cities?year=2020"
     },
     {
         "endpoint": "/population-ine/years",
@@ -100,112 +101,115 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/years"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/years"
     },
     {
-        "endpoint": "/population-ine/cities/year/<year>",
-        "description": "Get population in Spain by INE for every available city in a year",
+        "endpoint": "/population-ine/cities",
+        "description": "Get population in Spain by INE for every available city",
         "methods": "GET",
-        "path-args": [{"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/cities?year=2020"
     },
     {
-        "endpoint": "/population-ine/city/<id_city>/year/<year>",
-        "description": "Get population in Spain by INE for specific city in a year",
+        "endpoint": "/population-ine/city/<id_city>",
+        "description": "Get population in Spain by INE for specific city",
         "methods": "GET",
-        "path-args": [{"id": "id_city", "description": "Selected city id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [{"id": "id_city", "description": "Selected city id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/city/28089/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/city/28089?year=2020"
     },
     {
-        "endpoint": "/population-ine/province/<id_province>/cities/year/<year>",
-        "description": "Get population in Spain by INE for every available city for specific province in a year",
+        "endpoint": "/population-ine/province/<id_province>/cities",
+        "description": "Get population in Spain by INE for every available city for specific province",
         "methods": "GET",
-        "path-args": [{"id": "id_province", "description": "Selected province id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [{"id": "id_province", "description": "Selected province id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/province/11/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/province/11/cities?year=2020"
     },
     {
-        "endpoint": "/population-ine/region/<id_region>/cities/year/<year>",
-        "description": "Get population in Spain by INE for every available city for specific region in a year",
+        "endpoint": "/population-ine/region/<id_region>/cities",
+        "description": "Get population in Spain by INE for every available city for specific region",
         "methods": "GET",
-        "path-args": [{"id": "id_region", "description": "Selected region id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [{"id": "id_region", "description": "Selected region id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/region/02/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/region/02/cities?year=2020"
     },
     {
-        "endpoint": "/population-ine/provinces/year/<year>",
-        "description": "Get population in Spain by INE for every available province in a year",
+        "endpoint": "/population-ine/provinces",
+        "description": "Get population in Spain by INE for every available province",
         "methods": "GET",
-        "path-args": [{"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/provinces/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/provinces?year=2020"
     },
     {
-        "endpoint": "/population-ine/province/<id_province>/year/<year>",
-        "description": "Get population in Spain by INE for specific province in a year",
+        "endpoint": "/population-ine/province/<id_province>",
+        "description": "Get population in Spain by INE for specific province",
         "methods": "GET",
-        "path-args": [{"id": "id_province", "description": "Selected province id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [{"id": "id_province", "description": "Selected province id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/province/07/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/province/07?year=2020"
     },
     {
-        "endpoint": "/population-ine/region/<id_region>/provinces/year/<year>",
-        "description": "Get population in Spain by INE for every available province for specific region in a year",
+        "endpoint": "/population-ine/region/<id_region>/provinces",
+        "description": "Get population in Spain by INE for every available province for specific region",
         "methods": "GET",
-        "path-args": [{"id": "id_region", "description": "Selected region id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [{"id": "id_region", "description": "Selected region id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/region/01/provinces/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/region/01/provinces?year=2020"
     },
     {
-        "endpoint": "/population-ine/regions/year/<year>",
-        "description": "Get population in Spain by INE for every available region in a year",
+        "endpoint": "/population-ine/regions",
+        "description": "Get population in Spain by INE for every available region",
         "methods": "GET",
-        "path-args": [{"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/regions/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/regions?year=2020"
     },
     {
-        "endpoint": "/population-ine/region/<id_region>/year/<year>",
-        "description": "Get population in Spain by INE for specific region in a year",
+        "endpoint": "/population-ine/region/<id_region>",
+        "description": "Get population in Spain by INE for specific region",
         "methods": "GET",
-        "path-args": [{"id": "id_region", "description": "Selected region id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"},
-                       {"id": "age", "description": "Distribution by age. no (default) / yes"}],
+        "path-args": [{"id": "id_region", "description": "Selected region id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "age", "description": "Distribution by age. no (default) / yes"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/population-ine/region/10/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/population-ine/region/10?year=2020"
     },
     {
         "endpoint": "/income-aeat/years",
@@ -215,49 +219,126 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-aeat/years"
+        "example": "https://data-collect-api.herokuapp.com/income-aeat/years"
     },
     {
-        "endpoint": "/income-aeat/cities/year/<year>",
-        "description": "Get income in Spain by AEAT for every available city in a year",
+        "endpoint": "/income-aeat/cities",
+        "description": "Get income in Spain by AEAT for every available city",
         "methods": "GET",
-        "path-args": [{"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-aeat/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/income-aeat/cities?year=2020"
     },
     {
-        "endpoint": "/income-aeat/city/<id_city>/year/<year>",
-        "description": "Get income in Spain by AEAT for specific city in a year",
+        "endpoint": "/income-aeat/city/<id_city>",
+        "description": "Get income in Spain by AEAT for specific city",
         "methods": "GET",
-        "path-args": [{"id": "id_city", "description": "Selected city id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [{"id": "id_city", "description": "Selected city id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-aeat/city/28089/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/income-aeat/city/28089?year=2020"
     },
     {
-        "endpoint": "/income-aeat/province/<id_province>/cities/year/<year>",
-        "description": "Get income in Spain by AEAT for every available city for specific province in a year",
+        "endpoint": "/income-aeat/province/<id_province>/cities",
+        "description": "Get income in Spain by AEAT for every available city for specific province",
         "methods": "GET",
-        "path-args": [{"id": "id_province", "description": "Selected province id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [{"id": "id_province", "description": "Selected province id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-aeat/province/49/cities/year/2020"
+        "example": "https://data-collect-api.herokuapp.com/income-aeat/province/49/cities?year=2020"
     },
     {
-        "endpoint": "/income-aeat/region/<id_region>/cities/year/<year>",
-        "description": "Get income in Spain by AEAT for every available city for specific region in a year",
+        "endpoint": "/income-aeat/region/<id_region>/cities",
+        "description": "Get income in Spain by AEAT for every available city for specific region",
         "methods": "GET",
-        "path-args": [{"id": "id_region", "description": "Selected region id"},
-                      {"id": "year", "description": "Selected year"}],
-        "query-args": [{"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "path-args": [{"id": "id_region", "description": "Selected region id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "http://localhost:9080/income-aeat/region/17/cities/year/2020"
-    }    
+        "example": "https://data-collect-api.herokuapp.com/income-aeat/region/17/cities?year=2020"
+    },
+    {
+        "endpoint": "/government/years",
+        "description": "Get the available years for government in Spain by MPTFP",
+        "methods": "GET",
+        "path-args": [],
+        "query-args": [],
+        "return": [{"id": "data", "description": "Data info"},
+                   {"id": "metadata", "description": "Metadata info"}],
+        "example": "https://data-collect-api.herokuapp.com/government/years"
+    },
+    {
+        "endpoint": "/government/cities",
+        "description": "Get government in Spain by MPTFP for every available city",
+        "methods": "GET",
+        "path-args": [],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "return": [{"id": "data", "description": "Data info"},
+                   {"id": "metadata", "description": "Metadata info"}],
+        "example": "https://data-collect-api.herokuapp.com/government/cities?year=2020"
+    },
+    {
+        "endpoint": "/government/city/<id_city>",
+        "description": "Get government in Spain by MPTFP for specific city",
+        "methods": "GET",
+        "path-args": [{"id": "id_city", "description": "Selected city id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "return": [{"id": "data", "description": "Data info"},
+                   {"id": "metadata", "description": "Metadata info"}],
+        "example": "https://data-collect-api.herokuapp.com/government/city/28089?year=2020"
+    },
+    {
+        "endpoint": "/government/province/<id_province>/cities",
+        "description": "Get government in Spain by MPTFP for every available city for specific province",
+        "methods": "GET",
+        "path-args": [{"id": "id_province", "description": "Selected province id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "return": [{"id": "data", "description": "Data info"},
+                   {"id": "metadata", "description": "Metadata info"}],
+        "example": "https://data-collect-api.herokuapp.com/government/province/03/cities?year=2020"
+    },
+    {
+        "endpoint": "/government/region/<id_region>/cities",
+        "description": "Get government in Spain by MPTFP for every available city for specific region",
+        "methods": "GET",
+        "path-args": [{"id": "id_region", "description": "Selected region id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "return": [{"id": "data", "description": "Data info"},
+                   {"id": "metadata", "description": "Metadata info"}],
+        "example": "https://data-collect-api.herokuapp.com/government/region/06/cities?year=2020"
+    },
+    {
+        "endpoint": "/government/regions",
+        "description": "Get government in Spain by MPTFP for every available region",
+        "methods": "GET",
+        "path-args": [],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "return": [{"id": "data", "description": "Data info"},
+                   {"id": "metadata", "description": "Metadata info"}],
+        "example": "https://data-collect-api.herokuapp.com/government/regions?year=2020"
+    },
+    {
+        "endpoint": "/government/region/<id_region>",
+        "description": "Get government in Spain by MPTFP for specific region",
+        "methods": "GET",
+        "path-args": [{"id": "id_region", "description": "Selected region id"}],
+        "query-args": [{"id": "year", "description": "Selected year"},
+                       {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
+        "return": [{"id": "data", "description": "Data info"},
+                   {"id": "metadata", "description": "Metadata info"}],
+        "example": "https://data-collect-api.herokuapp.com/government/region/17?year=2020"
+    }
 ]

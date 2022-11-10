@@ -24,8 +24,8 @@ def get_data_year(engineDB):
     # query 
     query = f'''
     SELECT DISTINCT "Year"
-    FROM {INCOME_TABLE}'
-    ORDER BY "Year"'
+    FROM {INCOME_TABLE}
+    ORDER BY "Year"
     '''
 
     #print(query)
@@ -56,15 +56,14 @@ def get_years():
     
 
 # get data DB
-def get_income_data(engineDB, year, id_city=None, id_province=None, id_region=None, normalized='no'):
+def get_income_data(engineDB, year=None, id_city=None, id_province=None, id_region=None, normalized='no'):
     # query 
     query = f'''
     WITH year_pop AS
     (
-    SELECT pop.Id_city, SUM(pop.Total) Total_pop
+    SELECT pop.Id_city, pop."Year", SUM(pop.Total) Total_pop
     FROM "{POPULATION_TABLE}" pop
-    WHERE pop."Year" = {year}
-    GROUP BY pop.Id_city
+    GROUP BY pop.Id_city, pop."Year"
     )
     '''
 
@@ -95,12 +94,17 @@ def get_income_data(engineDB, year, id_city=None, id_province=None, id_region=No
             INNER JOIN CITY c ON c.Id_city = i.Id_city  
             INNER JOIN PROVINCE p ON p.Id_province = c.Id_province 
             INNER JOIN REGION r ON r.Id_region = p.Id_region
-            INNER JOIN year_pop po ON po.Id_city = i.Id_city 
-            INNER JOIN INDICATOR_INCOME ii ON ii.Id_indicator = i.Id_indicator 
+            INNER JOIN year_pop po ON po.Id_city = i.Id_city and po."Year" = i."Year"
+            INNER JOIN INDICATOR_IN ii ON ii.Id_indicator = i.Id_indicator 
         WHERE 1 = 1
-            AND i."Year" = {year}
         '''
     
+    # specific year
+    if year != None:
+        query = query + f'''
+        AND i."Year" = {year}
+        '''
+
     # specific city
     if id_city != None:
         query = query + f'''
@@ -157,7 +161,7 @@ def get_income_metadata(data, name):
     return dict_datatype
     
 # get incomes by city
-def get_incomes(year, id_city=None, id_province=None, id_region=None, normalized='no'):
+def get_incomes(year=None, id_city=None, id_province=None, id_region=None, normalized='no'):
     # connect
     engineDB = connect_DB()
     # select data
