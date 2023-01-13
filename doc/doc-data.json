@@ -7,7 +7,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/cities"
+        "example": "http://localhost:9080/cities"
     },
     {
         "endpoint": "/provinces",
@@ -17,7 +17,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/provinces"
+        "example": "http://localhost:9080/provinces"
     },
     {
         "endpoint": "/regions",
@@ -27,7 +27,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/regions"
+        "example": "http://localhost:9080/regions"
     },
     {
         "endpoint": "/indicators-income-ine",
@@ -37,7 +37,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/indicators-income-ine"
+        "example": "http://localhost:9080/indicators-income-ine"
     },
     {
         "endpoint": "/income-ine/years",
@@ -47,7 +47,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-ine/years"
+        "example": "http://localhost:9080/income-ine/years"
     },
     {
         "endpoint": "/income-ine/cities",
@@ -58,7 +58,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-ine/cities?year=2020"
+        "example": "http://localhost:9080/income-ine/cities?year=2020"
     },
     {
         "endpoint": "/income-ine/city/<id_city>",
@@ -69,7 +69,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-ine/city/28089?year=2020"
+        "example": "http://localhost:9080/income-ine/city/28089?year=2020"
     },
     {
         "endpoint": "/income-ine/province/<id_province>/cities",
@@ -80,7 +80,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-ine/province/03/cities?year=2020"
+        "example": "http://localhost:9080/income-ine/province/03/cities?year=2020"
     },
     {
         "endpoint": "/income-ine/region/<id_region>/cities",
@@ -91,7 +91,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-ine/region/06/cities?year=2020"
+        "example": "http://localhost:9080/income-ine/region/06/cities?year=2020"
     },
     {
         "endpoint": "/population-ine/years",
@@ -101,7 +101,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/years"
+        "example": "http://localhost:9080/population-ine/years"
     },
     {
         "endpoint": "/population-ine/cities",
@@ -113,7 +113,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/cities?year=2020"
+        "example": "http://localhost:9080/population-ine/cities?year=2020"
     },
     {
         "endpoint": "/population-ine/city/<id_city>",
@@ -125,7 +125,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/city/28089?year=2020"
+        "example": "http://localhost:9080/population-ine/city/28089?year=2020"
     },
     {
         "endpoint": "/population-ine/province/<id_province>/cities",
@@ -137,7 +137,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/province/11/cities?year=2020"
+        "example": "http://localhost:9080/population-ine/province/11/cities?year=2020"
     },
     {
         "endpoint": "/population-ine/region/<id_region>/cities",
@@ -149,7 +149,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/region/02/cities?year=2020"
+        "example": "http://localhost:9080/population-ine/region/02/cities?year=2020"
     },
     {
         "endpoint": "/population-ine/provinces",
@@ -161,7 +161,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/provinces?year=2020"
+        "example": "http://localhost:9080/population-ine/provinces?year=2020"
     },
     {
         "endpoint": "/population-ine/province/<id_province>",
@@ -173,7 +173,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/province/07?year=2020"
+        "example": "http://localhost:9080/population-ine/province/07?year=2020"
     },
     {
         "endpoint": "/population-ine/region/<id_region>/provinces",
@@ -185,7 +185,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/region/01/provinces?year=2020"
+        "example": "http://localhost:9080/population-ine/region/01/provinces?year=2020"
     },
     {
         "endpoint": "/population-ine/regions",
@@ -197,7 +197,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/regions?year=2020"
+        "example": "http://localhost:9080/population-ine/regions?year=2020"
     },
     {
         "endpoint": "/population-ine/region/<id_region>",
@@ -209,7 +209,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/population-ine/region/10?year=2020"
+        "example": "http://localhost:9080/population-ine/region/10?year=2020"
     },
     {
         "endpoint": "/income-aeat/years",
@@ -219,7 +219,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-aeat/years"
+        "example": "http://localhost:9080/income-aeat/years"
     },
     {
         "endpoint": "/income-aeat/cities",
@@ -230,7 +230,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-aeat/cities?year=2020"
+        "example": "http://localhost:9080/income-aeat/cities?year=2020"
     },
     {
         "endpoint": "/income-aeat/city/<id_city>",
@@ -241,7 +241,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-aeat/city/28089?year=2020"
+        "example": "http://localhost:9080/income-aeat/city/28089?year=2020"
     },
     {
         "endpoint": "/income-aeat/province/<id_province>/cities",
@@ -252,7 +252,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-aeat/province/49/cities?year=2020"
+        "example": "http://localhost:9080/income-aeat/province/49/cities?year=2020"
     },
     {
         "endpoint": "/income-aeat/region/<id_region>/cities",
@@ -263,7 +263,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/income-aeat/region/17/cities?year=2020"
+        "example": "http://localhost:9080/income-aeat/region/17/cities?year=2020"
     },
     {
         "endpoint": "/government/years",
@@ -273,7 +273,7 @@
         "query-args": [],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/government/years"
+        "example": "http://localhost:9080/government/years"
     },
     {
         "endpoint": "/government/cities",
@@ -284,7 +284,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/government/cities?year=2020"
+        "example": "http://localhost:9080/government/cities?year=2020"
     },
     {
         "endpoint": "/government/city/<id_city>",
@@ -295,7 +295,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/government/city/28089?year=2020"
+        "example": "http://localhost:9080/government/city/28089?year=2020"
     },
     {
         "endpoint": "/government/province/<id_province>/cities",
@@ -306,7 +306,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/government/province/03/cities?year=2020"
+        "example": "http://localhost:9080/government/province/03/cities?year=2020"
     },
     {
         "endpoint": "/government/region/<id_region>/cities",
@@ -317,7 +317,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/government/region/06/cities?year=2020"
+        "example": "http://localhost:9080/government/region/06/cities?year=2020"
     },
     {
         "endpoint": "/government/regions",
@@ -328,7 +328,7 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/government/regions?year=2020"
+        "example": "http://localhost:9080/government/regions?year=2020"
     },
     {
         "endpoint": "/government/region/<id_region>",
@@ -339,6 +339,6 @@
                        {"id": "normalized", "description": "Data normalization. no (default) / yes"}],
         "return": [{"id": "data", "description": "Data info"},
                    {"id": "metadata", "description": "Metadata info"}],
-        "example": "https://data-collect-api.herokuapp.com/government/region/17?year=2020"
+        "example": "http://localhost:9080/government/region/17?year=2020"
     }
 ]
